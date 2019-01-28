@@ -4,6 +4,9 @@ var numPoms = 0;
 var paused = false; 
 var minutes = document.getElementById("minutes");
 var seconds = document.getElementById("seconds");
+document.getElementById("resetTime").addEventListener("click", resetTimer);
+document.getElementById("stopTime").addEventListener("click", stopTimer);
+document.getElementById("startTime").addEventListener("click", startTimer);
 
 function startTimer() {
 	if (paused == true) {
