@@ -23,19 +23,18 @@ function startTimer() {
 				}
 			}, 1000);
 	} else {
-		console.log(numPoms);
-		secs = 1500;
-		myInt = setInterval(function ()
-			{ 
-				console.log(secs);
-				secs--;
-				updateClock();
-				if (secs == 0) {
-					clearInterval(myInt);
-					numPoms++;
-					console.log(numPoms);
-				}
-			}, 1000);
+			secs = 1500;
+			myInt = setInterval(function ()
+				{ 
+					console.log(secs);
+					secs--;
+					updateClock();
+					if (secs == 0) {
+						clearInterval(myInt);
+						numPoms++;
+						console.log(numPoms);
+					}
+				}, 1000);
 	}
 }
 
@@ -76,7 +75,7 @@ function updateClock() {
 	}
 
 	if (sec < 10) {
-			seconds.innerText = "0" + sec;
+		seconds.innerText = "0" + sec;
 	} else {
 		seconds.innerText = sec;
 	}
