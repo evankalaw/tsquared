@@ -21,7 +21,7 @@ function startTimer() {
 			}, 1000);
 	} else {
 		console.log(numPoms);
-		secs = 1400;
+		secs = 1500;
 		myInt = setInterval(function ()
 			{ 
 				console.log(secs);
@@ -34,6 +34,19 @@ function startTimer() {
 				}
 			}, 1000);
 	}
+}
+
+function shortBreak() {
+	secs = 300;
+	myInt = setInterval(function ()
+			{ 
+				console.log(secs);
+				secs--;
+				updateClock();
+				if (secs == 0) {
+					clearInterval(myInt);
+				}
+			}, 1000);
 }
 
 function stopTimer() {
@@ -52,10 +65,16 @@ function updateClock() {
 	var time = secs;
 	var mins = Math.floor(time / 60);
 	var sec = time - (mins * 60);
-	minutes.innerText = mins;
+
+	if (mins < 10) {
+		minutes.innerText = "0" + mins;
+	} else {
+		minutes.innerText = mins;
+	}
+
 	if (sec < 10) {
 			seconds.innerText = "0" + sec;
 	} else {
-			seconds.innerText = sec;
+		seconds.innerText = sec;
 	}
 }

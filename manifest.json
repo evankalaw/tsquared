@@ -1,1 +1,11 @@
-manifest.json
+  {
+    "name": "TSquared",
+    "version": "1.0",
+    "description": "Test Chrome Extension - Pomodoro Timer!",
+    "manifest_version": 2,
+    "browser_action": {
+	    "default_icon": "icon.png",
+			"default_popup": "timer.html"
+		},
+		"icons": {"128": "icon_128.png"}
+  }
